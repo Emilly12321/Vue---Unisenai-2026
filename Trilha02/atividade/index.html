@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Vue</title>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h1>{{titulo}}</h1>
+
+        <div v-if="autenticado">
+
+            <h2>Bem vindo,{{usuario.nome}}</h2>
+            <button @click="logout">Sair</button>
+
+        </div>
+
+        <div v-else>
+
+            <h2>Cadastro</h2>
+
+            <form @submit.prevent="cadastro">
+
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" v-model="username" required>
+
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" v-model="password" required>
+
+                <button type="submit">Entrar</button>
+
+            </form>
+
+        </div>
+
+
+        <div v-else>
+
+            <h2>LOGIN</h2>
+
+            <form @submit.prevent="cadastro">
+
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" v-model="username" required>
+
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" v-model="password" required>
+
+                <button type="submit">Entrar</button>
+
+            </form>
+
+        </div>
+
+        <p v-show="erro">Nome de usuário ou senha incorreta.</p>
+
+
+    </div>
+
+    <!--Para que o navegador consiga entender que o VueJS está sendo usado, pois não estamos usando um empacotador dos pacotes do node_modules ( VITE, etc...); -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

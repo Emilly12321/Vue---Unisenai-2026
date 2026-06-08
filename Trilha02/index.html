@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprendendo Vue</title>
+</head>
+<body>
+
+    <div id="app">
+        <!-- Usamos para quando precisamos definir atributos dinamicamentes com base dos dados vindo das intâncias do VUE -->
+        <a v-bind:href="url">Testando v-bind</a> <br><br>
+
+        <!-- O v-model observa o input via variavel da instancia Vue (texto), colocando/atualizando qualquer coisa que for colocado no input, será adicionado/atualizado na tag <p> ( paragrafo) abaixo -->
+        <label for="texto">Testando o v-model: </label>
+        <input type="text" v-model="texto" placeholder="Digite algo aqui">
+        <p>{{ texto }}</p>
+
+        <p v-if="vendo"> Olá, você está vendo esse v-if</p>
+        <p v-else> Olá, agora você está vendo esse v-else</p>
+
+        <!-- O elemento mesmo sendo true ou false, irá constar no html, diferente do v-if/else, que retira o elemento se a condição for atendida -->
+        <h2 v-show="status">{{titulo}}</h2>
+
+        <h1 v-text="mensagem"></h1>
+
+        <label for="pesquisa">Pesquisar por ID: </label>
+        
+        <input type="text" v-model="pesquisa_id" placeholder="informe um id "> 
+
+        <div v-if="user.id == pesquisa_id">
+            <br>
+            ID: {{user.id}},<br>
+            nome: {{user.nome}},<br>
+            email: {{user.email}},<br>
+            profissao: {{user.profissao}}
+
+        </div>
+
+        <div v-else>
+            <p>ID {{pesquisa_id}} não existe em nosso dados armazenados </p>
+
+        </div>
+
+        <div>
+
+            <ul id="nomes">
+
+                <li v-for="nome in nomes" :key="nome.id">
+
+                    {{ nome.text }}
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h1>{{comeco}}</h1>
+
+            <ul>
+                
+                <li v-for="nome in nomes">{{nome}}</li>
+                <li v-for="item in nomes ">{{item.text}}</li>
+                <li v-for="item in nomes ">{{item.text}}{{" - "}}{{item.status}}</li>
+                <li v-for="(item,index) in nomes">{{index + " - "}}{{item.text}}</li>
+
+
+            </ul>
+
+
+        </div>
+
+    </div>
+
+    <!--Para que o navegador consiga entender que o VueJS está sendo usado, pois não estamos usando um empacotador dos pacotes do node_modules ( VITE, etc...); -->
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+    <script src="script.js"></script>
+    
+</body>
+</html>

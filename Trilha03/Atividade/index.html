@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Vue JS - Diretiva v-model interligando formulário e dados</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{titulo}}</h1>
+        <label for="">Nome</label>
+        <input type="text" v-model="nome">
+        <br><br>
+
+        <label for="">E-mail</label>
+        <input type="text" v-model="email">
+        <br><br>
+
+        <button @click="mensagem">Enviar</button>
+
+        <hr>
+
+        Nome: {{nome}} <br>
+        E-mail: {{email}} <br>
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+<script src="script.js"></script>
+</html>
