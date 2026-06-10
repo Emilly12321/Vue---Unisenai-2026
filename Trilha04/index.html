@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Vue js - diretiva v-bind, atribuindo valor às tags html</title>
+    <style>
+        .red {
+            color: red;
+        }
+
+        .green {
+            color: green;
+        }
+
+        .blue {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="app">
+
+        <h1>{{titulo}}</h1>
+
+        <img v-bind:src="'https://br.vuejs.org/images/logo.png'" v-bind:alt="'Vuejs is awesome'"
+            v-bind:data-img-large="'https://br.vuejs.org/images/logo.png'" v-bind:alt="'Vuejs is awesome!'">
+
+        <p :class="classe">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae magni, doloribus dicta
+            illo adipisci ut quidem deserunt quibusdam error rem fuga sapiente necessitatibus odit illum esse. Non esse
+            neque ab.</p>
+
+
+    </div>
+
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+<script src="script.js"></script>
+
+</html>

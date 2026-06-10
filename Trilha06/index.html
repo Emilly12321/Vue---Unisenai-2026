@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app">
+
+        <button @click="mostrarAlerta">Clique aqui</button>
+
+        <br><br>
+
+        <p @mouseover="console">Passe o mouse aqui</p>
+
+        <br><br>
+
+        <input @keyup="mostrarTecla">
+
+        <br><br>
+
+        <button @click="cumprimentar('ola')">Clique aqui</button>
+
+        <button @click="mostrarCoordenada">Mostrar Coordenada</button>
+
+        <button @click.stop="acao"> Clique em Stop </button>
+
+        <div @click.self="acao">Div_teste</div>
+
+        <div @click.once="acao">Acionado apenas 1 vez</div>
+
+        <button @click="contar">Contador: {{contador}}</button>
+
+        <form @click.prevent="enviarFormulario">
+
+            <input type="text" v-model="nome">
+            <button type="submit">Enviar</button>
+
+        </form>
+
+        <form action="https://www.google.com">
+
+            <button type="submit" class="btn btn-primary" @click.prevent.stop="enviar">Enviar</button>
+
+
+        </form>
+
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script>
+<script src="script.js"></script>
+
+</html>
