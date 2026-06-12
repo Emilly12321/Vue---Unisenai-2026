@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    
+    <div id="app">
+
+        <!-- <button-component text="Clique Aqui" color="red"></button-component>
+        <button-component text="Enviar" color="green"></button-component>
+        <button-component text="Cancelar" color="yellow"></button-component> -->
+        
+        <!-- <br><br>
+
+        <button-component text="Click Aqui" @clicked="handleClick()"></button-component> -->
+
+        <br><br>
+
+        <button @click="currentContent='component-a'">Teste A</button>
+        <button @click="currentContent='component-b'">Teste B</button>
+
+        <component :is="currentContent"></component>
+
+        <card-component>
+
+            <h1>Título do Cartão</h1>
+            <p>Este é o conteúdo do cartão, passado como slot</p>
+
+        </card-component>
+
+    </div>
+
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.x/dist/vue.js"></script>
+<script src="script.js"></script>
+
+</html>

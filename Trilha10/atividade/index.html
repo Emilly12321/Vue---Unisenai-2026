@@ -12,30 +12,26 @@
 </head>
 
 <body>
+    
     <div id="app">
 
-        <p>Mensagem atual: {{ message }}</p>
-        <input v-model="message">
-        <br><br>
-
-        <p>Whatch - Observadores:</p>
-        <p>{{mensagem}}</p>
-        <input v-model="mensagem">
-        <p>Status: {{status}}</p>
-
-        <br><br>
-
-        <p>Watch + Computed + method</p>
-        <p>{{nomeCompleto}}</p>
-
-        <input type="text" v-model="primeiroNome" placeholder="Primeiro Nome">
-        <input type="text" v-model="sobrenome" placeholder="Sobrenome">
-        <p>{{respostaAplicacao}}</p>
-        <br><br>
-
-
+        <h1>{{titulo}}</h1>
+        <menu-bar></menu-bar>
+        <menu-bar></menu-bar>
+        <menu-bar></menu-bar>
+        <menu-bar></menu-bar>
 
     </div>
+
+    <template id="menu">
+
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+    </template>
 
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.7.x/dist/vue.js"></script>
