@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <title>Agenda com VUE</title>
+</head>
+
+<body>
+    <div id="app" >
+
+        <h1 class="text-center mb-5 mt-3">Cadastro de Agenda</h1>
+
+
+        <form @submit.prevent="editIndex === -1 ? adicionarContato() : atualizarContato()"
+            class="form d-flex pe-5 me-5 ">
+
+            <input class=" form-control m-2" type="text" v-model="novoContato.nome" placeholder="Nome" required>
+            <input class="form-control m-2" type="text" v-model="novoContato.telefone" placeholder="Telefone" required>
+            <input class="form-control m-2 " type="text" v-model="novoContato.email" placeholder="email" required>
+            <button type="submit" class="form-control m-2 me-5 btn"
+                :class="editIndex === -1 ? 'btn-primary' : 'btn-warning'">{{editIndex === -1 ? 'Adicionar'
+                :'Atualizar'}}</button>
+
+        </form>
+
+            <div v-if="mensagemVisivel" class="p-1 ms-5 me-5  alert alert-success text-center ">
+                {{mensagemAlerta}}
+            </div>
+
+            <div class="p-1 ms-5 me-5 mt-3 text-end h6 text-dark">Total de contatos: {{contadorContatos}}</div>
+
+
+        <table class="table table-striped-columns  text-center">
+            <thead>
+
+                <tr>
+
+                    <th>Nome</th>
+                    <th>Telefone</th>
+                    <th>Email</th>
+                    <th>Ações</th>
+
+
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr v-for="(contato, index) in contatos" :key="index">
+
+                    <td>{{contato.nome}}</td>
+                    <td>{{contato.telefone}}</td>
+                    <td>{{contato.email}}</td>
+                    <td>
+                        <button @click="pegarIndex(index)" class="btn btn-warning text-light"><i
+                                class="bi bi-pencil"></i></button>
+                        <button @click="deletarContato(index)" class="btn btn-danger"><i
+                                class="bi bi-trash"></i></button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.x/dist/vue.js"></script>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+</html>
