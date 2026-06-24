@@ -10,7 +10,6 @@ export default {
     }
   },
   mouted() {
-
     axios.get('https://jsonplaceholder.typicode.com/users').then(response=>{
       this.usuarios = response.data.map(user => ({nome: user.nome}))
     })
