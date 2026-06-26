@@ -1,0 +1,81 @@
+1 -> b - Um framework JS progressivo para construção de interfaces de usuários;
+
+2 -> d - Necessidade de múltiplas linguagens de programação para funcionar;
+
+3 -> b - Apenas Node..js e npm
+
+4 -> c - vue create my-project / npm create vue@latest
+
+5 -> b - Um conjunto de regras para comunicação entre sistemas web utilizando padrões HTTP
+
+6 -> c - A sincronização automática entre o modelo de dados e a interface do usuário 
+
+7 -> d - v-model
+
+8 -> a - v-for
+
+9 -> a - @click
+
+10 -> b - v-if
+
+11 -> b - Objs reutilizaveis que encapsulam lógica, estrutura e estilos;
+
+12 -> b - v-slot
+
+13 ->  b - Apenas utilizando propriedades  (props)
+
+14 -> b -  Elementos HTML que permitem a passagem de conteúdo dinâmico para componentes filhos
+
+15 -> a - Composition permite organizar código de forma mais modular e reutilizável
+
+16 -> b - Um gerenciador de estado global que substitui o Vuex
+
+17 -> a - defineStore('minhaStore',{state () => ({ ... })});
+
+18 -> a - npm install pinia 
+
+19 -> a - métodos que retornam dados processados a partir do estado da store;
+
+20 -> d - definindo state diretamente no setup()
+
+21 -> b - Facilita a criação d einterfaces utilizando Material Design
+
+22 -> a - npm install vuetify
+
+23 -> a - <v-btn>
+
+24 -> e - vuetify-validator
+
+25 -> c - npm install bootstrap
+
+26 -> b - um framework Node.js para criação de servidores e APIs RESTful
+
+27 -> a - Sequelize
+
+28 -> c - Create , Read , Update e Delete
+
+29 -> d - Render
+
+30 -> a - importar o Axios e realizar uma requisição HTTP usando o axios.get()
+
+31 -> a - Laravel
+
+32 -> c - Interceptar requisições para adicionar lógica de autenticação ou manipulação de dados
+
+33 -> b - Uma ferramenta de autenticação baseada em JSON para segurança em APIs
+
+34 -> d - php install composer
+
+35 -> a - inicia um servidor local na porta 8000 servindo arquivos da pasta public
+
+36 -> b - Permite requisições assícronas de forma mais intuitiva do que a Fetch APIs
+
+37 -> b - ViaCEP
+
+38 -> a - Monittorando erros com .catch() ou try...catch
+
+39 -> a - Content-Type / usar construção
+
+40 -> a - Erro de CORS
+
+
